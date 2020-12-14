@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+</head>
+<body>
+    <h1>Welcome <span th:text="${name}"></span></h1>
+
+    <ul>
+        <li th:each="book, status : ${books}">
+            <span th:text="${book.name} + ' - ' + ${book.author}"
+                  th:styleappend="${status.even} ? 'color:hotpink' : 'color:lightblue'"></span>
+        </li>
+    </ul>
+
+</body>
+</html>
